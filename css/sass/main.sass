@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap&subset=cyrillic')
+
+
+h1,p
+	font-family: 'Roboto', sans-serif !important
+
+
+
+$red : #FF9595
+$blue : #95B7FF
+$green : #95FFCE
+$purple : #C995FF
+$yellow : #FFEB95
+
+$gold : #9E8B6B
+$d : #212212
+
+.header
+	display: grid
+	width: 100%
+	align-items: center
+	grid-template-columns: 1fr 1fr 1fr
+	align-items: center
+	padding: 30px 0 
+	
+	.tel
+		justify-self: start
+
+	.func-icons
+		display: flex
+		justify-self: end
+		.search,
+		.acc,
+		.cart
+			cursor: pointer
+			margin: 0 12px
+
+	.logo
+		justify-self: center
+
+nav
+	width: 100%
+	border-top: 1px solid #E3E1E1
+	.main-mnu
+		display: flex
+		width: 100%
+		justify-content: center
+		align-items: center
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			flex-grow: 1
+
+			a
+				display: block
+				color: $d
+				padding: 20px 0
+				text-align: center
+				&:hover
+					color: $gold
+
+// слайдер
+
+.main-slider
+	height: 600px
+	.slide
+		min-height: 600px
+		outline: none !important
+		display: flex !important
+		justify-content: center
+		align-items: center
+	.slide#slick-slide00
+		background-color: #E1E0FE
+	.slide#slick-slide01
+		background-color: #BF57A8
+	.slide#slick-slide02
+		background-color: #3797C4
+
+.slick-dots
+	bottom: 10px !important
+	li 
+		margin: 0 !important
+		button:before
+			font-size: 34px !important
+
+/* Dots */
+.slick-dotted.slick-slider
+	margin-bottom: 30px
+
+
+.slick-dots
+	position: absolute
+	bottom: -25px
+	display: block
+	width: 100%
+	padding: 0
+	margin: 0
+	list-style: none
+	text-align: center
+
+.slick-dots li
+	position: relative
+	display: inline-block
+	width: 20px
+	height: 20px
+	margin: 0 5px
+	padding: 0
+	cursor: pointer
+
+.slick-dots li button
+	font-size: 0
+	line-height: 0
+	display: block
+	width: 20px
+	height: 20px
+	padding: 5px
+	cursor: pointer
+	color: transparent
+	border: 0
+	outline: none
+	background: transparent
+
+.slick-dots li button:hover,
+.slick-dots li button:focus
+	outline: none
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+	opacity: 1
+
+.slick-dots li button:before
+	font-family: 'slick'
+	font-size: 6px
+	line-height: 20px
+	position: absolute
+	top: 0
+	left: 0
+	width: 20px
+	height: 20px
+	content: '•'
+	text-align: center
+	opacity: .25
+	color: black
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.slick-dots li.slick-active button:before
+	opacity: .75
+	color: black
+
+
+
+// слайдер end
+
+.main-text
+	text-align: center
+	margin: 50px 0
+	h1
+		text-transform: uppercase
+		color: $d
+		font-weight: bold
+		font-size: 24px
+		margin-bottom: 20px
+		letter-spacing: .2ex
+		span
+			color: $gold
+	p
+		color: $d
+
+	a
+		color: $d
+		text-decoration: underline
+		&:hover
+			color: #9E8B6B
+
+
+
+.tiles
+	.tile-wrap
+		.tile
+			height: 560px
+			padding: 5px
+			[data-tile]
+				width: 100%
+				height: 100%
+				transition: all .3s ease
+				
+			[data-tile="red"]
+				background-color: $red
+				&:hover
+					background-color: darken($red,10%)
+			[data-tile="blue"]
+				background-color: $blue
+				&:hover
+					background-color: darken($blue,10%)
+			[data-tile="green"]
+				background-color: $green
+				&:hover
+					background-color: darken($green,10%)
+			[data-tile="purple"]
+				background-color: $purple
+				&:hover
+					background-color: darken($purple,10%)
+			[data-tile="yellow"]
+				background-color: $yellow
+				&:hover
+					background-color: darken($yellow,10%)
+
+.advs
+	margin: 40px 0
+	.adv
+		text-align: center
+		padding: 0 5px
+		h1
+			font-size: 16px
+			font-weight: bold
+			text-transform: uppercase
+			letter-spacing: .2ex
+			color: $gold
+			margin-bottom: 15px
+		p
+
+
+footer
+	padding: 30px 0
+	border-top: 1px solid #E3E1E1
+	border-bottom: 1px solid #E3E1E1
+	.links-block
+		display: flex
+		.categories
+			flex-grow: 1
+			h1
+				font-size: 16px
+				text-transform: uppercase
+				font-weight: bold
+				letter-spacing: .2ex
+			.links
+				display: flex
+				justify-content: space-between
+				margin-top: 20px
+				ul
+					list-style: none
+					margin: 0
+					padding: 0
+					li
+						margin: 8px 0
+						a
+							color: #000
+							font-size: 16px
+		.client-serv
+			flex-grow: 1
+			h1
+				font-size: 16px
+				text-transform: uppercase
+				font-weight: bold
+				letter-spacing: .2ex
+			.links
+				display: flex
+				justify-content: space-between
+				margin-top: 20px
+				ul
+					list-style: none
+					margin: 0
+					padding: 0
+					li
+						margin: 8px 0
+						a
+							color: #000
+							font-size: 16px
+	.rss-block
+		border-left: 1px solid #E3E1E1
+		padding-left: 20px
+		height: 100%
+		h1
+			font-size: 16px
+			text-transform: uppercase
+			font-weight: bold
+			letter-spacing: .2ex
+		form
+			display: flex
+			flex-direction: column
+			.form-for-rss
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 40px
+				flex-wrap: wrap
+				input.email
+					height: 100%
+					flex-grow: 1
+					padding-left: 10px
+					width: auto
+					border-top-left-radius: 5px
+					border-bottom-left-radius: 5px
+					border: 1px solid #d4d1d1
+					background-color: #fff
+					
+				.submit-btn
+					height: 100%
+					flex-grow: 1
+					background-color: #000
+					color: #fff
+					font-weight: bold
+					border: none
+					font-size: 14px
+					letter-spacing: .2ex
+					outline: none !important
+					padding: 0
+					border-top-right-radius: 5px
+					border-bottom-right-radius: 5px
+					cursor: pointer
+			.checkbox-wrap
+				margin-top: 10px
+				height: 20px
+				font-size: 14px
+				display: flex
+				align-items: center
+				input.checkbox
+					width: 18px
+					height: 18px
+				label
+					margin-left: 10px
+					a
+						color: #000
+						text-decoration: underline
+.footer
+	padding: 20px 0
+	.respons
+		p
+			margin: 0
+			font-size: 14px
+			span
+				color: #979797
+	.artof-wrap
+		display: flex
+		height: 100%
+		justify-content: flex-end
+		align-items: flex-end
+		p.artof
+			color: #979797
+			font-size: 14px
+			a
+				color: #979797
+
+
+.mobile-mnu
+	display: none 
+	padding: 20px 0
+	box-shadow: 0px 2px 8px rgba(0,0,0,0.15)
+	.func-icons
+		display: flex
+		justify-self: end
+		.search,
+		.acc,
+		.cart
+			cursor: pointer
+			margin: 0 12px
+
+
+// icon-font
+
+@font-face 
+  font-family: 'icomoon';
+  src: url('../../fonts/icomoon.eot?585hp8')
+  src: url('../../fonts/icomoon.eot?585hp8#iefix') format('embedded-opentype'), url('../../fonts/icomoon.ttf?585hp8') format('truetype'), url('../../fonts/icomoon.woff?585hp8') format('woff'), url('../../fonts/icomoon.svg?585hp8#icomoon') format('svg')
+  font-weight: normal
+  font-style: normal
+  font-display: block
+
+
+[class^="icon-"], [class*=" icon-"] 
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	font-size: 24px
+  /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+
+.icon-bars:before 
+  content: "\e900"
+
+.icon-cart .path1:before 
+	content: "\e901"
+	color: rgb(0, 0, 0)
+
+.icon-cart .path2:before 
+	content: "\e902"
+	margin-left: -1.275390625em
+	color: rgb(158, 139, 107)
+
+.icon-cart .path3:before 
+	content: "\e903"
+	margin-left: -1.275390625em
+	color: rgb(255, 255, 255)
+
+.icon-search:before 
+	content: "\e904"
+
+.icon-shape:before 
+	content: "\e905"
+
+
+
+// icon-font end
